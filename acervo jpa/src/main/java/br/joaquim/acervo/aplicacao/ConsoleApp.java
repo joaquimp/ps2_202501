@@ -36,7 +36,7 @@ public class ConsoleApp {
          * se ja existir
          * update biblioteca set nome=? where id=?
          */
-        // biblRepository.save(b);
+         biblRepository.save(b);
 
         Livro l1 = new Livro(3, "Storytelling com Dados", "Cole Nussbaumer Knaflic", 2018, "Alta Books", b);
         Livro l2 = new Livro(4, "Avalie o que Importa: Como o Google, Bono Vox e a Fundação Gates Sacudiram o Mundo com os OKRs", "John Doerr", 2019, "Alta Books", b);
@@ -62,8 +62,8 @@ public class ConsoleApp {
          */
         List<Biblioteca> resposta = biblRepository.findAll();
         
-		System.out.println("======= Bibliotecas =======");
-		for(Biblioteca biblioteca: resposta) {
+	System.out.println("======= Bibliotecas =======");
+	for(Biblioteca biblioteca: resposta) {
             System.out.println("///// " + biblioteca.getNome() + " //////");
             List<Livro> livros = biblioteca.getLivros();
             for(Livro livro: livros) {
@@ -71,6 +71,6 @@ public class ConsoleApp {
             }
             System.err.println("////////////////////////////////");
         }
-		System.out.println("===========================");
+	System.out.println("===========================");
     }
 }
